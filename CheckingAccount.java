@@ -10,8 +10,8 @@ public class CheckingAccount{
     }
 
     public void deposit(double amount){
-		this.balance += amount;
-		System.out.println("$" + this.balance + " has been deposited");
+	this.balance += amount;
+	System.out.println("$" + this.balance + " has been deposited");
     }
 
     public void withdraw(double amount) throws InsufficientFundsException{
