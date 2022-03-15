@@ -16,7 +16,7 @@ public class CheckingAccount{
 
     public void withdraw(double amount) throws InsufficientFundsException{
         if (this.balance < amount){
-		    throw new InsufficientFundsException(amount - balance);
+	    throw new InsufficientFundsException(amount - balance);
         } 
         else {
             this.balance -= amount;
