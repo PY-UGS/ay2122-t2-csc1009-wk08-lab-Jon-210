@@ -7,11 +7,11 @@ public class CircleWithException {
     }
 
     public void setRadius(double radius){
-		if (radius < 0) {
-			throw new IllegalArgumentException("Exception: Radius should be a positive number.");
-		}else {
-			this.radius = radius;
-		}    
+	if (radius < 0) {
+		throw new IllegalArgumentException("Exception: Radius should be a positive number.");
+	}else {
+		this.radius = radius;
+	}    
     }
 
     public double getRadius(){
@@ -20,11 +20,11 @@ public class CircleWithException {
 
     public double getArea() throws Exception{
         double area =  PI * this.radius * this.radius;
-    		if (area > 1000) {
-    			throw new Exception("Exception: Area cannot be bigger than 1000.");
-    		}else {
-          return area;
-            }    
+	if (area > 1000) {
+    		throw new Exception("Exception: Area cannot be bigger than 1000.");
+    	}else {
+        	return area;
+        }    
     }
 
     public double getDiameter(){
