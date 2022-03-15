@@ -10,13 +10,17 @@ public class CheckingAccount{
     }
 
     public void deposit(double amount){
-	this.balance += amount;
-	System.out.println("$" + this.balance + " has been deposited");
+        if (amount < 0) {
+			throw new IllegalArgumentException("Exception: Deposited amount must be positive.");
+		}else {
+            this.balance += amount;
+		}    
+		System.out.println("$" + this.balance + " has been deposited");
     }
 
     public void withdraw(double amount) throws InsufficientFundsException{
         if (this.balance < amount){
-	    throw new InsufficientFundsException(amount - balance);
+		    throw new InsufficientFundsException(amount - balance);
         } 
         else {
             this.balance -= amount;
